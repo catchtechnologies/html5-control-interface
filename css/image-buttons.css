@@ -1,0 +1,213 @@
+:root {
+  --btn-rect-small-font-size: 1em;
+  --btn-rect-small-width: 100px;
+  --btn-rect-small-height: 50px;
+
+  --btn-rect-medium-font-size: 2em;
+  --btn-rect-medium-width: 150px;
+  --btn-rect-medium-height: 75px;
+
+  --btn-rect-large-font-size: 2.5em;
+  --btn-rect-large-width: 200px;
+  --btn-rect-large-height: 100px;
+
+  --btn-square-small-font-size: 1em;
+  --btn-square-small-width: 50px;
+  --btn-square-small-height: 50px;
+
+  --btn-square-medium-font-size: 2.5em;
+  --btn-square-medium-width: 100px;
+  --btn-square-medium-height: 100px;
+
+  --btn-square-large-font-size: 3em;
+  --btn-square-large-width: 150px;
+  --btn-square-large-height: 150px;
+
+  --btn-circle-small-font-size: 1em;
+  --btn-circle-small-width: 50px;
+  --btn-circle-small-height: 50px;
+
+  --btn-circle-medium-font-size: 2em;
+  --btn-circle-medium-width: 100px;
+  --btn-circle-medium-height: 100px;
+
+  --btn-circle-large-font-size: 4em;
+  --btn-circle-large-width: 150px;
+  --btn-circle-large-height: 150px;
+}
+
+.img-btn{
+  background-color: transparent;
+  background-size: cover; 
+  background-position: center; 
+  border: none; 
+  transition: all 0.5s; 
+  cursor: pointer;
+  align-items: center;
+  outline: none;
+}
+
+.img-btn:active {
+	position:relative;
+	top:1px;
+  left: 1px;
+}
+
+.img-btn.active {
+	position:relative;
+	top:1px;
+  left: 1px;
+}
+
+.img-btn:disabled{
+  pointer-events: none;
+  color: #666666;   
+}
+
+/* Rectangle */
+.img-btn-rect{
+  font-size: 3em;
+  background-image: url("../assets/img/buttons/rectangle_00.png"); 
+  width: 250px; 
+  height: 125px; 
+}
+
+.img-btn-rect:active{
+  background-image: url("../assets/img/buttons/rectangle_01.png"); 
+}
+
+.img-btn-rect.active{
+  background-image: url("../assets/img/buttons/rectangle_01.png"); 
+}
+
+/* Rectangle Rounded*/
+.img-btn-rect-rounded{
+  font-size: 3em;
+  background-image: url("../assets/img/buttons/rectangle_rounded_00.png"); 
+  width: 250px; 
+  height: 125px; 
+}
+
+.img-btn-rect-rounded:active{
+  background-image: url("../assets/img/buttons/rectangle_rounded_01.png"); 
+}
+
+.img-btn-rect-rounded.active{
+  background-image: url("../assets/img/buttons/rectangle_rounded_01.png"); 
+}
+
+/* Rectangle & Rectangle Rounded Sizes */
+.img-btn-rect-small{
+  font-size: var(--btn-rect-small-font-size);
+  width: var(--btn-rect-small-width); 
+  height: var(--btn-rect-small-height); 
+}
+
+.img-btn-rect-medium{
+  font-size: var(--btn-rect-medium-font-size);
+  width: var(--btn-rect-medium-width); 
+  height: var(--btn-rect-medium-height); 
+}
+
+.img-btn-rect-large{
+  font-size: var(--btn-rect-large-font-size);
+  width: var(--btn-rect-large-width); 
+  height: var(--btn-rect-large-height); 
+}
+
+/* Square */
+.img-btn-square{
+  font-size: 3em;
+  background-image: url("../assets/img/buttons/square_00.png"); 
+  width: 250px; 
+  height: 250px; 
+}
+
+.img-btn-square:active {
+  background-image: url("../assets/img/buttons/square_01.png"); 
+}
+
+.img-btn-square.active {
+  background-image: url("../assets/img/buttons/square_01.png"); 
+}
+
+/* Square Rounded */
+.img-btn-square-rounded{
+  font-size: 3em;
+  background-image: url("../assets/img/buttons/square_rounded_00.png"); 
+  width: 250px; 
+  height: 250px; 
+}
+
+.img-btn-square-rounded:active{
+  background-image: url("../assets/img/buttons/square_rounded_01.png"); 
+}
+
+.img-btn-square-rounded.active{
+  background-image: url("../assets/img/buttons/square_rounded_01.png"); 
+}
+
+/* Square & Square Rounded Sizes */
+
+.img-btn-square-small{
+  font-size: var(--btn-square-small-font-size);
+  width: var(--btn-square-small-width); 
+  height: var(--btn-square-small-height); 
+}
+
+.img-btn-square-medium{
+  font-size: var(--btn-square-medium-font-size);
+  width: var(--btn-square-medium-width); 
+  height: var(--btn-square-medium-height); 
+}
+
+.img-btn-square-large{
+  font-size: var(--btn-square-large-font-size);
+  width: var(--btn-square-large-width); 
+  height: var(--btn-square-large-height); 
+}
+
+/* Circle */
+.img-btn-circle{
+  font-size: 3em;
+  background-image: url("../assets/img/buttons/circle_00.png"); 
+  width: 250px; 
+  height: 250px; 
+}
+
+.img-btn-circle:active{
+  background-image: url("../assets/img/buttons/circle_01.png"); 
+}
+
+.img-btn-circle.active{
+  background-image: url("../assets/img/buttons/circle_01.png"); 
+}
+
+.img-btn-circle-small{
+  font-size: var(--btn-circle-small-font-size);
+  width: var(--btn-circle-small-width); 
+  height: var(--btn-circle-small-height); 
+}
+
+.img-btn-circle-medium{
+  font-size: var(--btn-circle-medium-font-size);
+  width: var(--btn-circle-medium-width); 
+  height: var(--btn-circle-medium-height); 
+}
+
+.img-btn-circle-large{
+  font-size: var(--btn-circle-large-font-size);
+  width: var(--btn-circle-large-width); 
+  height: var(--btn-circle-large-height); 
+}
+
+.icon-btn-rect{
+  display: flex;  
+  word-break: break-word;
+  font-size: 1.4em;
+}
+
+.icon-btn-square{
+  display: flex;  
+  justify-content: center;
+}

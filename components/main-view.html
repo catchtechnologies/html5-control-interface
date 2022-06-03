@@ -1,0 +1,120 @@
+<div class="mv-container">
+  <main-view-header class="header"></main-view-header>
+
+  <!-- <main-view-left class="left-sidebar mdc-bg-blue-grey-200"></main-view-left> -->
+
+  <div id="main" class="main">
+    <!-- Start main-content -->
+    <div class="main-content">
+      <main-menu-item
+        icon="av-icon-input-laptop"
+        text="Laptop"
+        channel="av.source.select"
+        pointerdown-value="1"
+        active-channel="av.source.selected"
+        active-value="1"
+        disabled-channel="av.source.1.disable"
+        disabled-value="disable"
+        hidden-channel="av.source.1.hidden"
+        hidden-value="hidden"
+        info-channel="av.source.1.info"
+      >
+      </main-menu-item>
+
+      <main-menu-item
+        icon="av-icon-input_hdmi"
+        text="HDMI"
+        channel="av.source.select"
+        pointerdown-value="2"
+        active-channel="av.source.selected"
+        active-value="2"
+        info-channel="av.source.2.info"
+        disabled-channel="av.source.2.disable"
+        disabled-value="disable"
+        hidden-channel="av.source.2.hidden"
+        hidden-value="hidden"
+      >
+      </main-menu-item>
+
+      <main-menu-item
+        icon="av-icon-pc"
+        text="Computer"
+        channel="av.source.select"
+        pointerdown-value="3"
+        active-channel="av.source.selected"
+        active-value="3"
+        info-channel="av.source.3.info"
+        disabled-channel="av.source.3.disable"
+        disabled-value="disable"
+        hidden-channel="av.source.3.hidden"
+        hidden-value="hidden"
+      ></main-menu-item>
+
+      <main-menu-item
+        icon="av-icon-confroom"
+        text="Conference"
+        channel="av.source.select"
+        pointerdown-value="4"
+        active-channel="av.source.selected"
+        active-value="4"
+        info-channel="av.source.4.info"
+        disabled-channel="av.source.4.disable"
+        disabled-value="disable"
+        hidden-channel="av.source.4.hidden"
+        hidden-value="hidden"
+      ></main-menu-item>
+
+      <main-menu-item
+        icon="av-icon-bulb-1"
+        text="Lights On"
+        channel="lights.on"
+        pointerdown-value=" "
+        active-channel="lights.state"
+        active-value="on"
+      >
+      </main-menu-item>
+
+      <main-menu-item
+        icon="av-icon-bulb-2"
+        text="Lights Off"
+        channel="lights.off"
+        pointerdown-value=" "
+        active-channel="lights.state"
+        active-value="off"
+      >
+      </main-menu-item>
+
+      <main-menu-item
+        icon="av-icon-screen-d"
+        text="Screen Down"
+        channel="screen.down"
+        pointerdown-value=" "
+        active-channel="screen.state"
+        active-value="down"
+      >
+      </main-menu-item>
+
+      <main-menu-item
+        icon="av-icon-screen-u"
+        text="Screen Up"
+        channel="screen.up"
+        pointerdown-value=" "
+        active-channel="screen.state"
+        active-value="up"
+      >
+      </main-menu-item>
+    </div>
+    <!-- End main-content -->
+
+    <!-- right-sidebar is shown when active state is added from main.js -->
+    <right-sidebar
+      id="right-sidebar"
+      class="right-sidebar mdc-bg-blue-grey-200"
+    >
+    </right-sidebar>
+  </div>
+
+  <main-view-footer class="footer"></main-view-footer>
+</div>
+
+<link type="text/css" rel="stylesheet" href="./components/main-view.css" />

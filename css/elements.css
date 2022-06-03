@@ -1,0 +1,142 @@
+h1 {
+  font-size: 500%;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+.background::before{
+  content:"";
+  background: url("../assets/img/backgrounds/concrete_seamless.png") repeat 0 0;
+  /* background-image: url("../assets/img/backgrounds/crossword.png"); */
+  /* background: url("../assets/img/backgrounds/seamless_paper_texture.png") repeat 0 0; */
+  opacity:0.8;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  z-index:-1;
+}
+
+/* Button */
+
+.btn{
+	cursor:pointer;
+}
+
+/* .btn:hover {
+	background-color:transparent;
+} */
+
+.btn:active {
+	position:relative;
+	top:1px;
+}
+.btn:focus {
+	outline:0px;
+}
+
+.btn-xlarge{
+  padding:30px 60px;
+	font-size:3em;
+}
+
+.btn-large{
+  padding:20px 40px;
+	font-size:2.5em;
+}
+
+.btn-med{
+  padding:15px 30px;
+	font-size:2em;
+}
+
+.btn-small{
+  padding:10px 15px;
+	font-size:1.5em;
+}
+
+/* Modal */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  display: flex;  /* Center content */
+  flex-direction: column; /* Center content */
+  align-items: center; /* Center content */
+  background-color: #fefefe;
+  margin: 15% auto; /* Center modal 15% from the top and centered */
+  padding: 20px;
+  width: 80%;
+}
+
+/* Progress */
+progress {
+  border-radius: 10px;
+  width: 50%; 
+  height: 30px;  
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #444444;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* Icons */
+.md-icon{
+  font-family: "MD-Icons";
+  font-style: normal;
+  font-size: larger;
+  font-weight: normal;
+}
+
+
+.av-icon-xs{
+  font-size: 2em;
+}
+
+.av-icon-small{
+  font-size: 3em;
+}
+
+.av-icon-med{
+  font-size: 5em;
+}
+
+.av-icon-large{
+  font-size: 7em;
+}
+
+.av-icon-xl{
+  font-size: 10em;
+}
+
+.av-icon-xxl{
+  font-size: 20em;
+}

@@ -1,0 +1,10 @@
+.mvh-container {
+  display: grid;
+  grid-template-columns: 33% auto 33%;
+  width: 100%;
+}
+
+.right-sidebar-toggle.active{
+  transform: rotate(180deg);
+  transition: transform 0.2s linear;
+}

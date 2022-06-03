@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <!--Import CSS-->
+    <link type="text/css" rel="stylesheet" href="/css/fonts.css" />
+    <link type="text/css" rel="stylesheet" href="/css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="/css/blocks.css" />
+    <link type="text/css" rel="stylesheet" href="/css/elements.css" />
+    <link type="text/css" rel="stylesheet" href="/css/colors.css" />
+    <link type="text/css" rel="stylesheet" href="/css/image-buttons.css" />
+    <link type="text/css" rel="stylesheet" href="/css/av-icons.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/js/classes/controller-integration/domhandler.css"
+    />
+
+    <!-- Safari Home Screen Icon -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-barstyle"
+      content="black-translucent"
+    />
+    <link rel="apple-touch-icon" href="./assets/img/favicon.png" />
+
+    <!--  Chrome Safari Home Screen Icon -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" sizes="196x196" href="./assets/img/favicon.png" />
+
+    <!-- Prevent viewport zoom and scroll. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+  </head>
+  <body class="mdc-bg-blue-grey-900">
+    <div class="layout">
+      <div class="main background">
+        <start-view
+          id="startView"
+          class="center-vertical"
+          style="margin-top: -250px"
+        ></start-view>
+
+        <start-modal id="startModal" class="modal"></start-modal>
+
+        <main-view id="mainView"></main-view>
+      </div>
+    </div>
+
+    <!-- Load JavaScript -->
+    <script type="module" src="/js/main.js"></script>
+
+    <!-- Preven the browser's context menu from showing after long presses. -->
+    <script>
+      window.oncontextmenu = function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      };
+    </script>
+  </body>
+</html>

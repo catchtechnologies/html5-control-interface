@@ -1,0 +1,28 @@
+@font-face { 
+  font-family: "Lato";
+  font-weight: normal;
+  src: url("/assets/fonts/Lato/Lato-Light.ttf");
+  }
+
+@font-face { 
+  font-family: "Lato";
+  font-weight: bold;
+  src: url("/assets/fonts/Lato/Lato-Bold.ttf");
+}
+
+@font-face { 
+  font-family: "MD-Icons";
+  font-weight: normal;
+  src: url("../assets/icons/material-design/MaterialIconsOutlined-Regular.otf");
+}
+
+@font-face { 
+  font-family: "MD-Icons";
+  font-weight: bold;
+  src: url("../assets/icons/material-design/MaterialIcons-Regular.ttf");
+}
+
+@font-face { 
+  font-family: "AV-Icons";
+  src: url("../assets/icons/AV-Icons/admin.ttf");
+}

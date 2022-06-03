@@ -1,0 +1,55 @@
+<div class="mvf-container">
+  <div></div>
+  <div class="mvf-center-grid">
+    <horizontal-gauge class="vol-gauge" id="volume-gauge"></horizontal-gauge>
+
+    <div class="vol-control">
+      <button
+        id="volume-mute"
+        class="img-btn img-btn-square img-btn-square-medium mdc-text-blue-grey-50"
+        data-button-channel="volume.mute"
+        data-pointerdown-value=" "
+      >
+        <i class="md-icon">volume_off</i>
+      </button>
+
+      <button
+        id="volume-down"
+        class="img-btn img-btn-square img-btn-square-medium mdc-text-blue-grey-50 margin-top-20 margin-bottom-20"
+        data-button-channel="volume.down"
+        data-pointerdown-value="start"
+        data-pointerup-value="stop"
+      >
+        <i class="md-icon">volume_down</i>
+      </button>
+
+      <button
+        id="volume-up"
+        class="img-btn img-btn-square img-btn-square-medium mdc-text-blue-grey-50"
+        data-button-channel="volume.up"
+        data-pointerdown-value="start"
+        data-pointerup-value="stop"
+      >
+        <i class="md-icon">volume_up</i>
+      </button>
+    </div>
+  </div>
+
+  <div class="mvf-power-btn">
+    <button
+      data-type="button"
+      data-button-channel="system.stop"
+      data-pointerdown-value=" "
+      class="img-btn img-btn-circle img-btn-circle-large mdc-text-blue-grey-50"
+      id="end"
+    >
+      <i class="md-icon">power_settings_new</i>
+    </button>
+  </div>
+</div>
+
+<link
+  type="text/css"
+  rel="stylesheet"
+  href="./components/main-view-footer.css"
+/>

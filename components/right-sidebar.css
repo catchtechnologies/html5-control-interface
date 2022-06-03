@@ -1,0 +1,34 @@
+.rs-container{
+  height: 100%;
+  width: 100%; 
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.rs-card{
+  border: 1px solid black;
+  height: auto;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  text-indent: 10px;
+}
+
+.rs-card-title{
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.rs-card-body{
+  display: flex;
+  flex-direction: row;
+  padding: 10px
+}
+
+.rs-card-body-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px
+}

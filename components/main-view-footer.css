@@ -1,0 +1,41 @@
+.mvf-container {
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  width: 100%;
+  grid-template-areas: 
+  "mvf-aux mvf-center-grid mvf-power-btn";
+}
+
+.mvf-center-grid{
+  grid-area: mvf-center-grid;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 50px auto;  
+  grid-template-areas: 
+    "vol-gauge vol-gauge vol-gauge"
+    "vol-control vol-control vol-control";
+    overflow: hidden;
+}
+
+.vol-gauge {
+  grid-area: vol-gauge;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vol-control {
+  grid-area: vol-control;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  grid-auto-flow: column;
+}
+
+.mvf-power-btn{
+  grid-area: mvf-power-btn;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
