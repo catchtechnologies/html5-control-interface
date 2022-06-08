@@ -2,9 +2,9 @@
  * Handles the WebSocket to the Messaging Server
  */
 
-let cb = []; // the callback function to the DOM Handler
+let cb = []; // The callback function to the DOM Handler
 let connection;
-let id; // the webpage's websocket uuid
+let id; // The webpage's websocket uuid
 
 /**
  * Starts
@@ -20,10 +20,17 @@ export function subscribe(channels, callback) {
   cb.push(callback);
   setTimeout(() => {
     if (connection) {
+      let subscribeChannels = [];
+      channels.forEach((channel) => {
+        if (channel.length && typeof channel === "string") {
+          subscribeChannels.push(channel);
+        }
+      });
       const subscribeMessage = {
         action: "subscribe",
-        options: Array.from(channels),
+        options: subscribeChannels,
       };
+      console.log("Subscribing to channels: " + subscribeChannels);
       connection.send(JSON.stringify(subscribeMessage));
     }
   }, 1000);
@@ -58,22 +65,17 @@ function startWebSocket(channels) {
     protocol = "wss://";
   }
   let token = window.location.search;
-  // const wsUrl = protocol + window.location.host + "/updates" + token;
-  const wsUrl = protocol + "localhost:8080/updates" + token;
+  const wsUrl = protocol + window.location.host + "/updates" + token;
   connection = new WebSocket(wsUrl);
   console.log("Connecting to: " + wsUrl);
 
   connection.onopen = () => {
-    console.log("ws connected!");
-    const subscribeMessage = {
-      action: "subscribe",
-      options: Array.from(channels),
-    };
-    connection.send(JSON.stringify(subscribeMessage));
+    console.log("Websocket connected.");
+    subscribe(channels, null);
   };
 
   connection.onclose = () => {
-    // console.log('ws closed!');
+    console.log("Websocket closed.");
   };
 
   connection.onerror = (error) => {
@@ -119,7 +121,6 @@ function startWebSocket(channels) {
  * @param {Object|Array} message
  */
 function handleMessage(message) {
-  // if we are dealing with an array
   if (Array.isArray(message)) {
     message.forEach((m) => handleSingleMessage(m));
   } else {
