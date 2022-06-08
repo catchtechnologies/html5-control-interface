@@ -68,7 +68,7 @@ export default class DomHandler {
     this.log("Found data channels: " + Array.from(result.channels).join(","));
     this.#setEventListeners();
     Messaging.start(result.channels, (channel, value) => {
-      handleUpdate(channel, value);
+      this.handleUpdate(channel, value);
     });
   }
 
