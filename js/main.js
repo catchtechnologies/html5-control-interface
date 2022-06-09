@@ -26,8 +26,10 @@ function start() {
 
     /***  DOM Handler ***/
 
+    const subscribeChannels = ["system.state", "volume.level"];
     const domHandler = new DomHandler(
-      debug,
+      true,
+      subscribeChannels,
       (channel, value) => {
         console.log(
           "Received from server channel: " + channel + " and value: " + value
@@ -40,7 +42,7 @@ function start() {
             } else if (value === "stopped") {
               powerOffComplete();
             } else if (value === "starting") {
-              powerOnInProgess();
+              startupProgress();
             }
             return;
           case "volume.level":
@@ -104,10 +106,6 @@ function start() {
       startModal.hide();
       startView.style.display = "flex";
       mainView.style.display = "none";
-    }
-
-    function powerOnInProgess() {
-      startupProgress();
     }
 
     endBtn.onpointerdown = () => {

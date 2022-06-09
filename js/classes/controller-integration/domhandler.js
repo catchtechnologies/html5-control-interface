@@ -9,31 +9,35 @@ export default class DomHandler {
   /**
    * .
    * @param {boolean} debug - Prints debug messages to console when true.
+   * @param {array} subscribeChannels - An array of strings. Subscribes to channels events from the server for channels that are not present in html.
    * @param {object} updateCallback - Callback function providing channel and value parameters when a message is received.
    * @param {object} sendMessageCallback - Callback function providing channel and value parameters when a message is sent.
    */
-  constructor(debug, updateCallback, sendMessageCallback) {
+  constructor(debug, subscribeChannels, updateCallback, sendMessageCallback) {
     this.debug = debug;
     this.updateCallback = updateCallback;
     this.sendMessageCallback = sendMessageCallback;
     this.types = types;
     this.registeredDataChannels = [];
     this.registeredDomElements = [];
-    this.#registerAttributes([
-      "button-channel",
-      "checkbox-channel",
-      "mcsa-channel",
-      "number-channel",
-      "range-channel",
-      "select-channel",
-      "text-channel",
-      "active-channel",
-      "disabled-channel",
-      "hidden-channel",
-      "invisible-channel",
-      "inner-html-channel",
-      "style-channel",
-    ]);
+    this.#registerAttributes(
+      [
+        "button-channel",
+        "checkbox-channel",
+        "mcsa-channel",
+        "number-channel",
+        "range-channel",
+        "select-channel",
+        "text-channel",
+        "active-channel",
+        "disabled-channel",
+        "hidden-channel",
+        "invisible-channel",
+        "inner-html-channel",
+        "style-channel",
+      ],
+      subscribeChannels
+    );
   }
 
   log(msg) {
@@ -44,7 +48,7 @@ export default class DomHandler {
     }
   }
 
-  #registerAttributes(dataAttributes) {
+  #registerAttributes(dataAttributes, subscribeChannels) {
     if (Array.isArray(dataAttributes)) {
       this.dataAttributes = dataAttributes;
     } else {
@@ -65,8 +69,16 @@ export default class DomHandler {
     });
     this.channelAttributeMap = result.channelAttributeMap;
     this.channelMap = result.channelMap;
+
+    // Add extra channels from the constructor to the result.
+    if (subscribeChannels && Array.isArray(subscribeChannels))
+      subscribeChannels.forEach((item) => {
+        result.channels.add(item);
+      });
+
     this.log("Found data channels: " + Array.from(result.channels).join(","));
     this.#setEventListeners();
+
     Messaging.start(result.channels, (channel, value) => {
       this.handleUpdate(channel, value);
     });
